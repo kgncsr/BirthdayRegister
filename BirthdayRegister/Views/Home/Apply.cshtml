@@ -1,0 +1,32 @@
+﻿@model Person
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Apply</title>
+</head>
+<body>
+    <form asp-action="apply" method="post">
+        <div asp-validation-summary="All"></div>
+        <p>
+            <label asp-for="Name">Adınız</label>
+            <input asp-for="Name" />
+        </p>
+        <p>
+            <label asp-for="Email">Email</label>
+            <input asp-for="Email" />
+        </p>
+        <p>
+            <label asp-for="Phone">Phone</label>
+            <input asp-for="Phone" />
+        </p>
+        <p>
+            <label asp-for="Confirm">Katılacak mısınız ?</label>
+            <select asp-for="Confirm">
+                <option value="">Seciniz</option>
+                <option value="true">Evet Geliyorum</option>
+                <option value="false">Hayır Gelmiyorum</option>
+            </select>
+        </p>
+        <input type="submit" value="submit" />
+    </form>
+</body>
+</html>

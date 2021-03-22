@@ -1,0 +1,17 @@
+﻿@model Person
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head><title></title></head>
+    <body>
+        <h2>Merhaba, @Model.Name</h2>
+        @if (Model.Confirm==true)
+        {
+            <span>Partiye geldiğiniz icin tesekkürler.</span>
+            <div>Diğer katılımcıları <a asp-action="List">götüntüle</a>
+        </div>
+        }
+        else
+        {
+            <span>Üzgünüz</span>
+        }
+    </body>
+</html>
